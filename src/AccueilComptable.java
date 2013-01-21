@@ -76,5 +76,9 @@ public class AccueilComptable extends JFrame implements ActionListener {
 
 
 	}
+	
+	public void changerPanneau(int panneau) {
+		
+	}
 
 }
