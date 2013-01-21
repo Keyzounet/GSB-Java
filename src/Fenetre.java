@@ -7,7 +7,7 @@ import java.awt.event.* ;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class AccueilComptable extends JFrame implements ActionListener {
+public class Fenetre extends JFrame implements ActionListener {
 
 	private JPanel panel ;
 	private JPanel panel2 ;
@@ -18,7 +18,7 @@ public class AccueilComptable extends JFrame implements ActionListener {
 	private JButton btnClicValider ;
 
 
-	public AccueilComptable(){
+	public Fenetre(){
 		this.panel = new JPanel ();
 		this.panel2 = new JPanel ();
 		this.labelLogin = new JLabel("Login : ");

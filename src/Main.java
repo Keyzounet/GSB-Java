@@ -8,7 +8,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		
-		AccueilComptable unAccueilComptable = new AccueilComptable();
+		Fenetre unAccueilComptable = new Fenetre();
 		
 		ArrayList <Visiteur> lesVisiteurs = PasserelleBDD.afficherVisiteurs();
 		for (int i = 0; i < lesVisiteurs.size(); i++) {

@@ -118,47 +118,47 @@ public class PasserelleBDD {
 		}
 	}
 	
-	public FicheFrais getLesInfosFicheFrais(String idVisiteur, String mois) {
-		Connection con = connexion();
-		Statement st;
-		ResultSet rs = null;
-		
-		String idVisiteur, mois, nbJustificatifs, dateModif, idEtat;
-		int montantValide;
-		
-		try {
-			st = con.createStatement();
-			rs = st.executeQuery("SELECT ficheFrais.idVisiteur, ficheFrais.mois, ficheFrais.nbJustificatifs, ficheFrais.montantValide, ficheFrais.dateModif, ficheFrais.idEtat FROM  fichefrais INNER JOIN Etat on ficheFrais.idEtat = Etat.id WHERE fichefrais.idvisiteur ='" + idVisiteur + "' and fichefrais.mois = '" + mois + "'");
-			if (rs.next()) {
-				idVisiteur = rs.getString(1);
-				 = rs.getString(2);
-				leVisiteur = new Visiteur(id, nom);
-				lesVisiteurs.add(leVisiteur);
-			}
-			rs.close() ;   // Permet de libérer la mémoire utilisée.
-
-
-		} catch(Exception erreur) {
-			System.out.println(erreur);
-		}
-
-		try {
-			con.close();
-		} catch (SQLException e) {
-			System.out.println(e);
-		}
-		return lesVisiteurs;
-	}
-	
-	
-	public function getLesInfosFicheFrais($idVisiteur,$mois){
-		$req = "select ficheFrais.idEtat as idEtat, ficheFrais.dateModif as dateModif, ficheFrais.nbJustificatifs as nbJustificatifs, 
-			ficheFrais.montantValide as montantValide, etat.libelle as libEtat from  fichefrais inner join Etat on ficheFrais.idEtat = Etat.id 
-			where fichefrais.idvisiteur ='$idVisiteur' and fichefrais.mois = '$mois'";
-		$res = PdoGsb::$monPdo->query($req);
-		$laLigne = $res->fetch();
-		return $laLigne;
-	}
+//	public FicheFrais getLesInfosFicheFrais(String idVisiteur, String mois) {
+//		Connection con = connexion();
+//		Statement st;
+//		ResultSet rs = null;
+//		
+//		String idVisiteur, mois, nbJustificatifs, dateModif, idEtat;
+//		int montantValide;
+//		
+//		try {
+//			st = con.createStatement();
+//			rs = st.executeQuery("SELECT ficheFrais.idVisiteur, ficheFrais.mois, ficheFrais.nbJustificatifs, ficheFrais.montantValide, ficheFrais.dateModif, ficheFrais.idEtat FROM  fichefrais INNER JOIN Etat on ficheFrais.idEtat = Etat.id WHERE fichefrais.idvisiteur ='" + idVisiteur + "' and fichefrais.mois = '" + mois + "'");
+//			if (rs.next()) {
+//				idVisiteur = rs.getString(1);
+//				 = rs.getString(2);
+//				leVisiteur = new Visiteur(id, nom);
+//				lesVisiteurs.add(leVisiteur);
+//			}
+//			rs.close() ;   // Permet de libérer la mémoire utilisée.
+//
+//
+//		} catch(Exception erreur) {
+//			System.out.println(erreur);
+//		}
+//
+//		try {
+//			con.close();
+//		} catch (SQLException e) {
+//			System.out.println(e);
+//		}
+//		return lesVisiteurs;
+//	}
+//	
+//	
+//	public function getLesInfosFicheFrais($idVisiteur,$mois){
+//		$req = "select ficheFrais.idEtat as idEtat, ficheFrais.dateModif as dateModif, ficheFrais.nbJustificatifs as nbJustificatifs, 
+//			ficheFrais.montantValide as montantValide, etat.libelle as libEtat from  fichefrais inner join Etat on ficheFrais.idEtat = Etat.id 
+//			where fichefrais.idvisiteur ='$idVisiteur' and fichefrais.mois = '$mois'";
+//		$res = PdoGsb::$monPdo->query($req);
+//		$laLigne = $res->fetch();
+//		return $laLigne;
+//	}
 	
 //	public static String dernierMoisSaisi(String idVisiteur) {
 //		
