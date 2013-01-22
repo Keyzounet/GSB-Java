@@ -1,7 +1,7 @@
 import java.sql.*;
 import java.util.ArrayList;
 /**
- * Classe regroupant les fonctions liÃ©es Ã  la base de donnÃ©es
+ * Classe regroupant les fonctions liées à  la base de données
  * 
  * @author mac-kevin
  *
@@ -48,7 +48,7 @@ public class PasserelleBDD {
 				leVisiteur = new Visiteur(id, nom);
 				lesVisiteurs.add(leVisiteur);
 			}
-			rs.close() ;   // Permet de libï¿½rer la mï¿½moire utilisï¿½e.
+			rs.close() ;   // Permet de libérer la mémoire utilisée.
 
 
 		} catch(Exception erreur) {
@@ -96,9 +96,9 @@ public class PasserelleBDD {
 		objetSessionComptable  = leComptable;
 
 		if (estConnecte()) 
-			return "Connexion rï¿½ussie !";
+			return "Connexion réussie !";
 		else 
-			return "Connexion ï¿½chouï¿½e !";
+			return "Connexion échouée !";
 	}
 
 	public static boolean estConnecte() {
@@ -140,7 +140,7 @@ public class PasserelleBDD {
 //				leVisiteur = new Visiteur(id, nom);
 //				lesVisiteurs.add(leVisiteur);
 //			}
-//			rs.close() ;   // Permet de libï¿½rer la mï¿½moire utilisï¿½e.
+//			rs.close() ;   // Permet de libérer la mémoire utilisée.
 //
 //
 //		} catch(Exception erreur) {
