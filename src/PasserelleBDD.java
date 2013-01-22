@@ -1,6 +1,11 @@
 import java.sql.*;
 import java.util.ArrayList;
-
+/**
+ * Classe regroupant les fonctions liÃ©es Ã  la base de donnÃ©es
+ * 
+ * @author mac-kevin
+ *
+ */
 public class PasserelleBDD {
 
 	public static Comptable objetSessionComptable = null;
@@ -43,7 +48,7 @@ public class PasserelleBDD {
 				leVisiteur = new Visiteur(id, nom);
 				lesVisiteurs.add(leVisiteur);
 			}
-			rs.close() ;   // Permet de libérer la mémoire utilisée.
+			rs.close() ;   // Permet de libï¿½rer la mï¿½moire utilisï¿½e.
 
 
 		} catch(Exception erreur) {
@@ -91,9 +96,9 @@ public class PasserelleBDD {
 		objetSessionComptable  = leComptable;
 
 		if (estConnecte()) 
-			return "Connexion réussie !";
+			return "Connexion rï¿½ussie !";
 		else 
-			return "Connexion échouée !";
+			return "Connexion ï¿½chouï¿½e !";
 	}
 
 	public static boolean estConnecte() {
@@ -135,7 +140,7 @@ public class PasserelleBDD {
 //				leVisiteur = new Visiteur(id, nom);
 //				lesVisiteurs.add(leVisiteur);
 //			}
-//			rs.close() ;   // Permet de libérer la mémoire utilisée.
+//			rs.close() ;   // Permet de libï¿½rer la mï¿½moire utilisï¿½e.
 //
 //
 //		} catch(Exception erreur) {
