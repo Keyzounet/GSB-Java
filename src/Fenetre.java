@@ -18,6 +18,9 @@ public class Fenetre extends JFrame implements ActionListener {
 	private JButton btnClicValider ;
 
 
+	/**
+	 * Blablabla
+	 */
 	public Fenetre(){
 		this.panel = new JPanel ();
 		this.panel2 = new JPanel ();
