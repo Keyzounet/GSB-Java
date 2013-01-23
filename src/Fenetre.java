@@ -19,7 +19,7 @@ public class Fenetre extends JFrame implements ActionListener {
 
 
 	/**
-	 * Blablabla
+	 * JEEEEEEEEEEEEEEZ
 	 */
 	public Fenetre(){
 		this.panel = new JPanel ();
