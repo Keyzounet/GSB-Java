@@ -1,6 +1,11 @@
 import java.sql.*;
 import java.util.ArrayList;
-
+/**
+ * Classe regroupant les fonctions liées à  la base de données
+ * 
+ * @author mac-kevin
+ *
+ */
 public class PasserelleBDD {
 
 	public static Comptable objetSessionComptable = null;
